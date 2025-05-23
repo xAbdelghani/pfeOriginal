@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Liste des attestations</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .navbar-custom {
+            background-color: rgba(96, 122, 214, 0.59);
+        }
+
+        .compagnie-text {
+            color: #607AD6;
+        }
+
+        .compagnie-bg {
+            background-color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 4px;
+        }
+
+        .custom-table-header {
+            background-color: #D9D9D9;
+            color: #607AD6;
+        }
+
+        .custom-btn-color {
+            background-color: #607AD6;
+            border-color: #607AD6;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-custom navbar-dark">
+    <a class="navbar-brand" href="#">
+        <img src="images/orsys.png" alt="Logo" style="height: 40px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/attestations}">
+                    <span class="compagnie-bg">
+                        <span class="compagnie-text">Liste Compagnies</span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <h1> </h1>
+        <h1> </h1>
+        <h1> </h1>
+    </div>
+
+    <div class="row justify-content-end">
+        <div class="col-lg-3">
+            <a th:href="@{/attestations/new}" class="btn btn-primary btn-sm mb-3 custom-btn-color">
+                <i class="fas fa-plus"></i> AJOUTER
+            </a>
+        </div>
+    </div>
+
+    <table class="table table-striped table-bordered">
+        <thead class="custom-table-header">
+        <tr>
+            <th>Date de Génération</th>
+            <th>Date de Début</th>
+            <th>Date de Fin</th>
+            <th>Télécharger</th>
+            <th>Prix</th>
+            <th>Statut</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="attestation : ${attestations}">
+            <td th:text="${attestation.date_Generation}"></td>
+            <td th:text="${attestation.date_Debut}"></td>
+            <td th:text="${attestation.date_Fin}"></td>
+            <td>
+                <a th:href="@{/attestations/download/{id}(id=${attestation.id})}" class="btn btn-primary btn-sm custom-btn-color">
+                    <i class="fas fa-download"></i> Télécharger
+                </a>
+            </td>
+            <td th:text="${attestation.prix}"></td>
+            <td th:text="${attestation.statut}"></td>
+            <td>
+                <div class="btn-group" role="group">
+                    <span class="compagnie-bg">
+                        <a th:href="@{/attestations/edit/{id}(id=${attestation.id})}" class="btn  compagnie-text">Modifier</a>
+                    </span>
+                    <span class="compagnie-bg">
+                        <a th:href="@{/attestations/delete/{id}(id=${attestation.id})}" class="btn  compagnie-text">Supprimer</a>
+                    </span>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

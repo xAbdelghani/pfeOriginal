@@ -1,0 +1,67 @@
+.home-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 87%;
+    height: 150px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tile-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .tile-label {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .compagnie {
+    background-color: #e6f7ff;
+    color: #1890ff;
+  }
+  
+  .abonnement {
+    background-color: #fff0f6;
+    color: #eb2f96;
+  }
+  
+  .prepaiement {
+    background-color: #f0f5ff;
+    color: #2f54eb;
+  }
+  
+  .vehicule {
+    background-color: #fff7e6;
+    color: #fa8c16;
+  }
+  
+  .facture {
+    background-color: #fff1f0;
+    color: #f5222d;
+  }
+  
+  .table_reference {
+    background-color: #fffbe6;
+    color: #faad14;
+  }

@@ -1,0 +1,119 @@
+{
+  "realm": "Digitalisation",
+  "auth-server-url": "http://localhost:8180",
+  "resource": "Digitalisation-attestation",
+  "credentials": {
+    "secret": "c4xjxPfDXsX2OEsTQrwiCVoJNMq4KAjq"
+  },
+  "http-method-as-scope": true,
+  "paths": [
+    {
+      "path": "/api/v1/compagnie/*",
+      "enforcement-mode": "ENFORCING"
+
+    },
+
+    {
+      "path": "/api/v1/agence/*",
+      "enforcement-mode": "ENFORCING"
+    },{
+      "path": "/api/v1/abonnement/*",
+      "enforcement-mode": "ENFORCING"
+    },{
+      "path": "/api/v1/relationcp/*",
+      "enforcement-mode": "ENFORCING"
+    },{
+      "path": "/api/v1/contact/*",
+      "enforcement-mode": "ENFORCING"
+    },{
+      "path": "/api/v1/contacts/*",
+      "enforcement-mode": "ENFORCING"
+    },{
+      "path": "/api/v1/facture/*",
+      "enforcement-mode": "ENFORCING"
+    },{
+      "path": "/api/v1/fonction/*",
+      "enforcement-mode": "ENFORCING"
+    },{
+      "path": "/api/v1/pointvente/*",
+      "enforcement-mode": "ENFORCING"
+    },{
+      "path": "/api/v1/type/*",
+      "enforcement-mode": "ENFORCING"
+    },{
+      "path": "/api/v1/solde/*",
+      "enforcement-mode": "ENFORCING"
+    },{
+      "path": "/api/v1/statutA/*",
+      "enforcement-mode": "ENFORCING"
+    },{
+      "path": "/api/v1/statutC/*",
+      "enforcement-mode": "ENFORCING"
+    },{
+      "path": "/api/v1/typeattestation/*",
+      "enforcement-mode": "ENFORCING"
+    },{
+      "path": "/api/v1/typefacture/*",
+      "enforcement-mode": "ENFORCING"
+    },{
+      "path": "/api/v1/typeabonnement/*",
+      "enforcement-mode": "ENFORCING"
+    },
+    {
+      "path": "/api/v1/attestation/*",
+      "enforcement-mode": "ENFORCING"
+    },
+    {
+      "path": "/api/v1/offre/*",
+      "enforcement-mode": "ENFORCING"
+    },
+
+    {
+      "path": "/api/v1/statutF/*",
+      "enforcement-mode": "ENFORCING"
+    },
+
+    {
+      "path": "/api/v1/modele/*",
+      "enforcement-mode": "ENFORCING"
+    },
+
+    {
+      "path": "/api/v1/vehicule/*",
+      "enforcement-mode": "ENFORCING"
+    },
+
+    {
+      "path": "/api/v1/statutAtt/*",
+      "enforcement-mode": "ENFORCING"
+    },
+
+    {
+      "path": "/api/v1/attestationAutorisees/*",
+      "enforcement-mode": "ENFORCING"
+    },
+    {
+      "path": "/api/v1/notification/*",
+      "enforcement-mode": "ENFORCING"
+    },
+
+
+    {
+      "path": "/keycloak/users/{userId}",
+      "enforcement-mode": "ENFORCING",
+      "claim-information-point": {
+        "claims": {
+          "uri_claim": "{request.uri}"
+        }
+      }
+    },
+    {
+      "path": "/keycloak/*",
+      "enforcement-mode": "ENFORCING"
+    },
+    {
+      "path": "/keycloak/roles/*",
+      "enforcement-mode": "ENFORCING"
+    }
+  ]
+}

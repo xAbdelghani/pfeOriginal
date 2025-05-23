@@ -1,0 +1,107 @@
+.App {
+  text-align: center;
+}
+.ant-menu-item,
+.ant-menu-submenu-title {
+  color: white !important;
+}
+
+/* Custom CSS for Header */
+.custom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; /* White background */
+  border-bottom: 0.1px solid rgba(169, 169, 169, 0.4); /* Black line under the header */
+  padding: 0 14px; /* Optional: Add some padding for better spacing */
+  height: 45px;
+}
+
+/* App.css */
+.custom-menu {
+  background: white !important;
+}
+
+.custom-menu .ant-menu-item-selected {
+  background-color: #A9A9A9 !important;
+}
+
+.ant-menu-item-selected {
+  background-color: #A9A9A9 !important;
+  color: white !important;
+  
+}
+
+.custom-collapse-button .ant-layout-sider-trigger {
+  background-color: rgba(0, 0, 0, 0.9) !important; /* Changez cette couleur selon vos besoins */
+  color: white !important; /* Couleur de l'icône de la flèche */
+}
+
+
+
+.navbar-container {
+  height: 90vh; /* Ensure the parent container also occupies the full height of the viewport */
+ 
+}
+
+
+.navbar-brand {
+  flex: 1;
+  
+}
+
+
+/* Assurer que le body et le html occupent toute la hauteur 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+#root {
+  display: flex;
+  height: 100%;
+}
+
+
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+  rgba(0,0,0,0.1)
+} */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(96, 122, 214, 0.80);
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.card-header {
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-item {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.card-item strong {
+  display: inline-block;
+  width: 150px;
+  color: rgba(96, 122, 214, 0.80);
+}
+
+
+

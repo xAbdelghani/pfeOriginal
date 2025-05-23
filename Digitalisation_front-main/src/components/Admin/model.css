@@ -1,0 +1,22 @@
+.compagnies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.compagnie-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.compagnie-item:hover {
+    background-color: #e0e0e0;
+}
+
+.compagnie-item input {
+    margin-right: 10px;
+}
+

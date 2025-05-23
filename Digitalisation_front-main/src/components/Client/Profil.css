@@ -1,0 +1,41 @@
+.form-container {
+    width: 90%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    
+  }
+  label {
+    text-align: left;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #607AD6;
+  }
+  
+  input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  h3 {
+    background-color: #607AD6;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+  }
+  h4 {
+    background-color: rgba(96, 122, 214, 0.50);;
+    padding: 7px;
+    border-radius: 4px;
+    color: white;
+  }
+  

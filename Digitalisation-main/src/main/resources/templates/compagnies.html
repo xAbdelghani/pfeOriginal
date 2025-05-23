@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Comapgnie Management System</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+<style>
+    .navbar-custom {
+        background-color: rgba(96, 122, 214, 0.59); /* #607AD6 à 59% d'opacité */
+    }
+
+    .compagnie-text {
+        color: #607AD6; /* #607AD6 à 59% d'opacité */
+    }
+
+    .compagnie-bg {
+        background-color: #fff; /* Couleur de fond blanche */
+        padding: 5px 10px; /* Ajoutez un peu de remplissage */
+        border-radius: 5px;/* Ajoutez un peu de bord arrondi */
+        margin-right: 4px
+    }
+    .custom-table-header {
+        background-color: #D9D9D9;
+        color: #607AD6;/* Couleur d'en-tête du tableau */
+    }
+    .custom-btn-color {
+        background-color: #607AD6; /* Couleur du bouton #607AD6 */
+        border-color: #607AD6; /* Couleur de la bordure du bouton #607AD6 */
+    }
+</style>
+
+<nav class="navbar navbar-expand-md navbar-custom navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">
+        <img src="images/orsys.png" alt="Logo" style="height: 40px;">
+    </a>
+
+    <!-- Toggler/collapsible Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/compagnies}">
+                    <span class="compagnie-bg">
+                        <span class="compagnie-text">Liste Compagnie</span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class ="container">
+    <div class = "row">
+        <h1> </h1>
+        <h1> </h1>
+        <h1> </h1>
+    </div>
+
+    <div class="row justify-content-end">
+        <div class="col-lg-3">
+            <a th:href="@{compagnies/new}" class="btn btn-primary btn-sm mb-3 custom-btn-color">
+                <i class="fas fa-plus"></i> AJOUTER
+            </a>
+        </div>
+    </div>
+
+
+    <table class = "table table-striped table-bordered">
+        <thead class = "custom-table-header">
+        <tr>
+            <th>  Nom</th>
+            <th> Raison_so</th>
+            <th> Email </th>
+            <th> Telephone </th>
+            <th> Adresse </th>
+            <th> Type_abn </th>
+            <th> Statut </th>
+            <th> Actions </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each = "compagnie : ${compagnies}">
+            <td th:text = "${compagnie.nom}"></td>
+            <td th:text = "${compagnie.raison_social}"></td>
+            <td th:text = "${compagnie.email}"></td>
+            <td th:text = "${compagnie.telephone}"></td>
+            <td th:text = "${compagnie.adresse}"></td>
+            <td th:text = "${compagnie.type}"></td>
+            <td th:text = "${compagnie.statut}"></td>
+
+            <td>
+                <div class="btn-group" role="group">
+                    <span class="compagnie-bg">
+                        <a th:href="@{/compagnies}" class="btn compagnie-text">Apercu</a>
+                    </span>
+                    <span class="compagnie-bg">
+                        <a th:href="@{/compagnies/edit/{id}(id=${compagnie.id})}" class="btn compagnie-text">Modifier</a>
+                    </span>
+                    <span class="compagnie-bg">
+                        <a th:href="@{/compagnies/{id}(id=${compagnie.id})}" class="btn compagnie-text">Supprimer</a>
+                    </span>
+                </div>
+            </td>
+
+
+        </tr>
+        </tbody>
+
+    </table>
+
+</div>
+</body>
+</html>

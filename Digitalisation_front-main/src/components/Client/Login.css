@@ -1,0 +1,121 @@
+.login-background {
+  background-image: url('../../assets/digit.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px;
+  max-width: 550px;
+  max-height: 440px;
+  margin: auto;
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 6%;
+}
+
+.login-form {
+  width: 100%;
+  padding-right: 20px;
+  
+}
+
+.logo img {
+  margin-left: 20%;
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.login-form h2 {
+  margin-left: 30%;
+  font-size: 2rem;
+  margin-bottom: 14px;
+  color: white;
+}
+
+.login-form p {
+  color: #0e4d85;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 8px 8px 8px 15px;
+  margin-bottom: 12px;
+  border: 1px solid #cecece;
+  border-radius: 50px;
+  font-size: 17px;
+  background: transparent;
+  transform: translateY(5px) !important; /* Combined with transform */
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: rgb(203, 199, 199);
+   
+}
+
+.forgot-password {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.login-btn {
+  background: rgb(26, 151, 193);
+  color: white;
+  padding: 13px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  margin-left: 34%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: rgb(2, 76, 100);
+}
+
+.register-link {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.register-link a {
+  color: #009688;
+  text-decoration: none;
+}
+
+.social-login {
+  margin-top: 20px;
+}
+
+.social-login p {
+  color: #7d6c6d;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+

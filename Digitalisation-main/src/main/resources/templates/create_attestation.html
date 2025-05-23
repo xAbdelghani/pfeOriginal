@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Compagnie Management System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-custom navbar-dark">
+    <a class="navbar-brand" href="#">
+        <img src="images/orsys.png" alt="Logo" style="height: 40px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/attestations}">
+                    <span class="compagnie-bg">
+                        <span class="compagnie-text">Liste Attestations</span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
+<br>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-6 col-sm-6 card">
+            <h1 class="text-center">Nouvelle attestation</h1>
+            <div class="card-body">
+                <form th:action="@{/attestations}" th:object="${attestation}" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label>Date de génération</label>
+                        <input type="text" name="date_Generation" th:field="*{date_Generation}" class="form-control" placeholder="Enter attestation date_Generation"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Date de début</label>
+                        <input type="text" name="date_Debut" th:field="*{date_Debut}" class="form-control" placeholder="Enter attestation date_Debut"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Date de fin</label>
+                        <input type="text" name="date_Fin" th:field="*{date_Fin}" class="form-control" placeholder="Enter attestation date_Fin"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Prix</label>
+                        <input type="text" name="prix" th:field="*{prix}" class="form-control" placeholder="Enter attestation prix"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Statut</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="statut" id="statutActive" value="Active" th:field="*{statut}">
+                            <label class="form-check-label" for="statutActive">Active</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="statut" id="statutInactive" value="Inactive" th:field="*{statut}">
+                            <label class="form-check-label" for="statutInactive">Inactive</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="file">Sélectionner un fichier</label>
+                        <input type="file" id="file" name="fichier" accept="application/pdf">                    </div>
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

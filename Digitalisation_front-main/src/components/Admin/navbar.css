@@ -1,0 +1,41 @@
+.navbar-custom {
+    background-color: rgba(96, 122, 214, 0.59);
+}
+
+.compagnie-text {
+    color: #607AD6;
+}
+
+.text-center{
+    color: #607AD6;
+}
+
+.compagnie-bg {
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 4px;
+}
+
+.custom-table-header th {
+    background-color: #D9D9D9;
+    color: #607AD6;
+}
+
+
+.custom-btn-color {
+    background-color: #607AD6;
+    border-color: #607AD6;
+}
+
+.custom-select {
+    width: 100%; /* Définir la largeur du Select à 100% */
+    height: 200%;
+}
+
+.custom-btn-color:hover {
+    background-color: rgba(96, 122, 214, 0.35); /* Couleur au survol */
+    color: #607ad6; /* Couleur du texte au survol */
+}
+
+
